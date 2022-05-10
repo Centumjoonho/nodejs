@@ -3,3 +3,115 @@
 ERROR :
 파일 명이 한글일 경우 create_process로 들어갈 때 
 에러가 난다 
+
+        //경로를 읽는 노드js 함수
+        //콜백함수 -> 하나의 인자 ! 주변 인자와 연관 되어 있음!
+        // fs.readdir('./data', function(error, dir_filelist){
+        //   //home
+        //   var title = 'Welcome';
+        //   var description = '안녕하세요. 종주 중독 홈페이지입니다.';
+
+        //   var filelist = template.list(dir_filelist);
+        //   //filelist => return data_list;
+        //   //readdir -> templateList -> templateHTML
+        //   var html = template.html(
+        //     title ,
+        //     filelist ,
+        //   `<h2>${title}</h2>${description}`,
+        //   `<a href="/create">create</a>`);
+        //   //웹 서버와 수신이 잘 되면 : 200
+        //   response.writeHead(200);
+        //   //웹 화면에 업로
+        //   response.end(html);
+        // });
+        //db 화 !! 
+
+
+         // //컨텐츠를 선택했을 때 활성
+        // // id 값이 있는 경우 리드 !!
+        // fs.readdir('./data', function(error, dir_filelist){
+        //   var filteredId = path.parse(queryData.id).base;
+        //   //id 값이 있는경우는 해당 파일 내용을 읽어내는 node.js 함
+        //   fs.readFile(`data/${filteredId}`,'utf-8',function(err,description){
+        //     var title = queryData.id
+        //     var sanitizedTitle =sanitizeHTML(title);
+        //     var sanitizedDescription = sanitizeHTML(description,{allowedTags:['h1']});
+        //     var filelist = template.list(dir_filelist)
+        //     var html = template.html(
+        //       title ,
+        //       filelist ,
+        //       `<h2>${title}</h2>${sanitizedDescription}`,
+        //       `<a href="/create">create</a>
+        //        <a href="/update?id=${sanitizedTitle}">update</a>
+        //        <form action = "delete_process" method ="post">
+        //         <input type ="hidden" name = "id" value = "${title}">
+        //         <input type ="submit" value ="delete">
+        //         <div>
+        //           <progress value = "80" min ="0" max="100"></progress>
+        //         </div>
+        //         <div>
+        //           <meter min = "0" max="100" low ="20" hight="65" optimum ="15" value = "100"></meter>
+        //         </div>
+        //        </form>`
+        //      );
+
+               //query가 보이는 것은 get방식
+
+
+    //  var title= post.title;
+    //  var description = post.description;
+
+    //  fs.writeFile(`data/${title}`,description,"utf-8",
+    //  function(err){
+    //    // 302는 페이지 리다이렉
+    //    // -> 보낸 데이터 값을 다시 페이지에 리 다이렉
+    //    response.writeHead(302,{Location:`/?id=${title}`});
+    //    response.end("success");
+    //  })
+
+//update --- 
+    //    fs.readdir('./data', function(error, filelist){
+//      var filteredId = path.parse(queryData.id).base;
+//      fs.readFile(`data/${filteredId}`,'utf-8',function(err,description){
+//        var title = queryData.id
+//        var list = template.list(filelist)
+//        var html = template.html(title , list ,
+
+//          //데이터 입력 form
+//          `<form class="" action="/update_process" method ="post">
+//          <input type ="hidden" name ="id" , value = "${title}">
+//             <p><input type="text" name="title" placeholder ="title" value="${title}"></p>
+//             <p>
+//               <textarea name="description" rows="8" cols="22" placeholder="description" >${description}</textarea>
+//             </p>
+//             <p>
+//             <input type="submit">
+//           </p>
+//           </form>`,
+//          `<a href="/create">create</a> <a href="/update?id=${title}">update</a>`)
+
+//        response.writeHead(200);
+//        response.end(html);
+//    });
+//  });
+
+
+update process ---
+  // fs.rename(`data/${id}`,`data/${title}`,function(error){
+    //   fs.writeFile(`data/${title}`,description,"utf-8",
+    //   function(err){
+    //     // 302는 페이지 리다이렉
+    //     // -> 보낸 데이터 값을 다시 페이지에 리 다이렉
+    //     response.writeHead(302,{Location:`/?id=${title}`});
+    //     response.end("success");
+    //   });
+    // });
+
+
+
+delete_process
+  // fs.unlink(`data/${filteredId}`,function(error){
+    //   response.writeHead(302,{Location:`/`});
+    //   response.end();
+    // });
+    // console.log(post);
