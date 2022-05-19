@@ -115,3 +115,11 @@ delete_process
     //   response.end();
     // });
     // console.log(post);
+
+
+                <div>
+                 <progress value = "80" min ="0" max="100"></progress>
+               </div>
+               <div>
+                 <meter min = "0" max="100" low ="20" hight="65" optimum ="15" value = "100"></meter>
+               </div>

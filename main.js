@@ -6,9 +6,12 @@ var qs = require('querystring');
 var template = require('./lib/template.js');
 const { log } = require('console');
 var connection = require('./lib/db');
-var topic = require('./lib/topic');
+var mainpage = require('./lib/mainpage');
 const { authorSelect } = require('./lib/template.js');
 var author = require('./lib/author');
+var topic = require('./lib/topic');
+var active = require('./lib/active');
+
 
 // 웹 서버 생성
 var app = http.createServer(function(request,response){
@@ -23,31 +26,31 @@ var app = http.createServer(function(request,response){
     if (pathname == '/') {
       //id 값이 없는 경우 리드 !!
       if (queryData.id== undefined) {
-        topic.home(request, response);
+        mainpage.home(request, response);
       }else{
-        topic.page(request,response);
+        mainpage.page(request,response);
       }
    //create 버튼 클릭 !! ->
  }else if (pathname=="/create") {
 
-  topic.create(request,response);
+  mainpage.create(request,response);
    
 //post 방식 데이터 받는 /create_process
  }else if (pathname == "/create_process") {
 
-  topic.create_process(request,response);
+  mainpage.create_process(request,response);
 
  }else if (pathname=="/update") {
    
-  topic.update(request,response);
+  mainpage.update(request,response);
 
 }else if (pathname=="/update_process") {
 
- topic.update_process(request,response);
+  mainpage.update_process(request,response);
 
 }else if (pathname=="/delete_process") {
 
- topic.delete_process(request,response);
+  mainpage.delete_process(request,response);
 
 }else if (pathname=="/author") {
 
@@ -71,6 +74,15 @@ else if (pathname=="/author/create_process") {
 
   author.delete_process(request,response);
   
+ }else if (pathname=="/active") {
+
+  active.home(request,response);
+  
+ }else if (pathname=="/topic") {
+
+  topic.home(request, response);
+
+  
  }else{
     
   response.writeHead(404); //web server <-> web browser
@@ -80,4 +92,4 @@ else if (pathname=="/author/create_process") {
 
 });
 
-app.listen(3000);
+app.listen(3030);
