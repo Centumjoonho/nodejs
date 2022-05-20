@@ -40,3 +40,15 @@ INSERT INTO `topic` VALUES (2,'Oracle','Oracle is ...','2018-01-03 13:01:10',1);
 INSERT INTO `topic` VALUES (3,'SQL Server','SQL Server is ...','2018-01-20 11:01:10',2);
 INSERT INTO `topic` VALUES (4,'PostgreSQL','PostgreSQL is ...','2018-01-23 01:03:03',3);
 INSERT INTO `topic` VALUES (5,'MongoDB','MongoDB is ...','2018-01-30 12:31:03',1);
+
+
+CREATE TABLE `runners` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) NOT NULL,
+  `avpace` text NOT NULL,
+  `totaltime` text NOT NULL,
+  `avheartrate` int(11) NOT NULL,
+  `avcadence` int(11) NOT NULL,
+  
+  PRIMARY KEY (`id`)
+);

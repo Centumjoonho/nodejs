@@ -1,4 +1,3 @@
-
 //Node.js import -> 크롬의v8엔진을 외부에서도 사용할 수 있게 runtime 프로그램
 var http = require('http');
 var url = require('url'); 
@@ -11,6 +10,7 @@ const { authorSelect } = require('./lib/template.js');
 var author = require('./lib/author');
 var topic = require('./lib/topic');
 var active = require('./lib/active');
+var runners = require('./lib/runners');
 
 
 // 웹 서버 생성
@@ -81,7 +81,26 @@ else if (pathname=="/author/create_process") {
  }else if (pathname=="/topic") {
 
   topic.home(request, response);
+ }
+ else if (pathname=="/runners") {
 
+  runners.home(request, response);
+
+ }else if (pathname=="/runners/delete_process") {
+
+  runners.delete_process(request,response);
+  
+ }else if (pathname=="/runners/update") {
+
+  runners.update(request,response);
+  
+ }else if (pathname=="/runners/update_process") {
+
+  runners.update_process(request,response);
+  
+ }else if (pathname=="/runners/create_process") {
+
+  runners.create_process(request,response);
   
  }else{
     
