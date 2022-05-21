@@ -5,14 +5,15 @@ var qs = require('querystring');
 var template = require('./lib/template.js');
 const { log } = require('console');
 var connection = require('./lib/db');
-var mainpage = require('./lib/mainpage');
+var mainpage = require('./lib/mainpage.js');
 const { authorSelect } = require('./lib/template.js');
 var author = require('./lib/author');
 var topic = require('./lib/topic');
 var active = require('./lib/active');
 var runners = require('./lib/runners');
+var express = require('express');
 
-
+ 
 // 웹 서버 생성
 var app = http.createServer(function(request,response){
     var _url = request.url;
@@ -111,4 +112,6 @@ else if (pathname=="/author/create_process") {
 
 });
 
-app.listen(3030);
+app.listen(3030, function(){
+   console.log("good");
+});

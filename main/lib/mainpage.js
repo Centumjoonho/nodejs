@@ -19,8 +19,7 @@ exports.home = function(request,response){
         );
 
     
-        response.writeHead(200);
-        response.end(html);
+        response.send(html);
 
 
 };

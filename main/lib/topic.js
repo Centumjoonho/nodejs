@@ -5,23 +5,26 @@ var http = require('http');
 var url = require('url'); // 모듈 (node.js)
 var qs = require('querystring');
 const { findSourceMap } = require('module');
-var express = require('express');
+
+
 
 
 
 //api 여러개 제공할 때는 exports / 1개 단일 제공시 module.exports 
 exports.home = function(request,response){
-    
+
+connection.query(`SELECT * FROM topic`, function(error, topics){
+         
     var title = 'Welcome';
-    var html = template.html(title ," ",
+    var description = '안녕하세요. 종주 중독 홈페이지입니다.';
 
-        `<h2>Welcome</h2>안녕하세요. 종주 중독 홈페이지입니다`,""
-        );
+    var filelist = template.list(topics);
+    var html = template.html(title ,filelist ,
+        `<h2>${title}</h2>${description}`,"");
 
-    
-        response.writeHead(200);
-        response.end(html);
-
+    response.writeHead(200);
+    response.end(html);
+});
 
 };
 
@@ -57,7 +60,7 @@ exports.page = function(request,response){
 
           response.writeHead(200);
           response.end(html);
-        });
+        })
        
         
       });
