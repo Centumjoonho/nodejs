@@ -13,7 +13,6 @@ var active = require('./lib/active');
 var runners = require('./lib/runners');
 var express = require('express');
 
- 
 // 웹 서버 생성
 var app = http.createServer(function(request,response){
     var _url = request.url;

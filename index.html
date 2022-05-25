@@ -1,18 +1,99 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>WEB1 - Welcome</title>
-  <meta charset="utf-8">
+  <meta charset="ko">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typing Text</title>
+  <!-- 글로벌 구글 아이콘 -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+  <!-- 랍스터 구글 폰드  -->
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  
+ 
 </head>
 <body>
-  <h1><a href="index.html">WEB</a></h1>
-  <ol>
-    <li><a href="1.html">HTML</a></li>
-    <li><a href="2.html">CSS</a></li>
-    <li><a href="3.html">JavaScript</a></li>
-  </ol>
-  <h2>WEB</h2>
-  <p>The World Wide Web (abbreviated WWW or the Web) is an information space where documents and other web resources are identified by Uniform Resource Locators (URLs), interlinked by hypertext links, and can be accessed via the Internet.[1] English scientist Tim Berners-Lee invented the World Wide Web in 1989. He wrote the first web browser computer program in 1990 while employed at CERN in Switzerland.[2][3] The Web browser was released outside of CERN in 1991, first to other research institutions starting in January 1991 and to the general public on the Internet in August 1991.
-  </p>
+  <ul class="tree">
+    <li>     
+    <input type ="checkbox" id="root">
+    <label for = "root">ROOT</label>
+     <ul>
+        <li>node</li>
+        <li>python</li>
+        <li>java</li>
+      </ul>
+    </li>
+  </ul>
+  <!-- <img src ="image/KakaoTalk_20220514_152317011_02.jpg"> -->
+  <!-- figure : 삽화( 삽화에 대한 설명 ) -->
+  <div id="colums">
+    <figure>
+      <img src="image/1.jpg">
+      <figcaption>부산 이기대 트레킹</figcaption>
+    </figure>
+      
+    <figure>
+      <img src="image/2.jpg">
+      <figcaption>부산 이기대 트레킹 완료 후 식사</figcaption>
+    </figure>
+      
+    <figure>
+      <img src="image/3.jpg">
+      <figcaption>부산 시민공원 수요일 러닝</figcaption>
+    </figure>
+      
+    <figure>
+      <img src="image/4.jpg">
+      <figcaption>부산 온천천 수요일 러닝</figcaption>
+    </figure>
+      
+    <figure>
+      <img src="image/5.jpg">
+      <figcaption>부산 황령산 야등</figcaption>
+    </figure>
+      
+    <figure>
+       <img src="image/6.jpg">
+      <figcaption>거제도 사량도 종주</figcaption>
+    </figure>
+      
+    <figure>
+      <img src="image/7.jpg">
+      <figcaption>부산 온천천 - 광안리 라이딩</figcaption>
+    </figure>	
+      
+    <figure>
+      <img src="image/8.jpg">
+      <figcaption>부산 사직 운동장 수요일 러닝</figcaption>
+    </figure>
+      
+    <figure>
+      <img src="image/9.jpg">
+      <figcaption>창원 운영진 김지훈 회원의 눈빛</figcaption>
+    </figure>	
+    <figure>
+      <img src="image/10.jpg">
+      <figcaption>거제도 사량도 종주 2</figcaption>
+    </figure>	
+  </div>
+  
+<div> 
+  <a href ="add" class = "btn add">add</a>
+  <a href="delete" class = "btn delete">delete</a>
+</div>
+  <!-- <div class ="thumnail round"style="background-image:url('image/KakaoTalk_20220514_152317011_02.jpg')"></div> -->
+  <div class="wrap">
+    <h1>
+      <span class="material-icons">language</span>
+    </h1>
+     <P id="dynamic" class="lg-text">
+    
+     </P>
+     <p class="sm-text">
+      
+     </p>
+  </div>
+  <script src = "front_web_page.js"></script>
 </body>
 </html>
