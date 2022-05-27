@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <link href="style.css" rel="stylesheet"> -->
+    <link href="tree_fontello/css/fontello.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <style>    
+    .container{
+        /* min-width: 600px; */
+    }
+   
+    *{
+        box-sizing: border-box;
+    }
+    .container{
+    border: 5px solid black;
+    }
+    .container>*{
+    border: 5px solid red;
+    }
+    .container>.content>*{
+    border: 5px solid green;
+    }
+    .container .content{
+        padding-left: 200px;
+        padding-right: 150px;
+        overflow: hidden;
+    }
+    .container .content>*{
+        float: left;
+        padding-bottom: 2500px;
+        margin-bottom: -2500px;
+    }
+   
+    .container .content main{
+        width: 100%;
+    }
+    .container .content nav{
+        width: 200px;
+        margin-left:-100% ;
+        left: -200px;
+        position: relative;
+    }
+    .container .content aside{
+        width: 150px;
+        margin-right: -150px;
+    }
+    .container footer{
+        clear: both;
+    }
+    @media (max-width:599px){
+       .container .content{
+        padding-left: 0;
+        padding-right: 0;
+        overflow: visible;
+    }
+        .container .content>*{
+        float: none;
+        padding-bottom: 0;
+        margin-bottom: -0;
+    }
+   
+        .container .content main{
+        width: 100%;
+    }
+        .container .content nav{
+        width: auto;
+        margin-left:0 ;
+        left: 0;
+        position: relative;
+    }
+        .container .content aside{
+        width: auto;
+        margin-right: 0;
+    }
+
+    }
+    .tree{
+    color: darkorange;
+    }
+    .tree, .tree ul{
+    list-style: none;
+    padding-left: 15px;
+    }
+    .tree *:before{
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    }
+    .tree label{
+    cursor: pointer;
+    }
+    .tree label::before{
+    content: '\f255';
+    font-family: fontello;
+    }
+    .tree a {
+    text-decoration: none;
+    color: darkslategray;
+    }
+    .tree a:before{
+    content: '\e800';
+    font-family: fontello;
+    }
+    .tree input[type="checkbox"] {
+        display: none;
+    }
+    .tree input[type="checkbox"]:checked~ul{
+        display: none;
+        
+    }
+    .tree input[type="checkbox"]:checked+label::before{
+    content: '\f256';
+    font-family: fontello;
+    }
+    .btn{
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    padding: 10px 20px 10px 20px;
+    margin: 10px;
+    margin-top: 50px;
+    display: inline-block;
+    border-radius: 10px;
+    transition : all 0.1s;
+    /* 슬로우모션 */
+    text-shadow: 0px -2px rgba(0, 0, 0, 0.493);
+    font-family: 'Lobster', cursive;
+    }
+    .btn:active{
+    transform: translateY(10px); 
+    /* 버튼 위치이동으로 눌림 효과 */
+    }
+    .btn.add{
+    background-color:rgba(65, 105, 225, 0.26);
+    border-bottom: 5px solid rgba(0, 0, 88, 0.356);
+    }
+    .btn.add:active{
+    border-bottom: 2px solid rgba(0, 0, 88, 0.356);
+    }
+    .btn.delete{
+    background-color:rgba(225, 65, 65, 0.226);
+    border-bottom: 5px solid rgba(95, 1, 1, 0.356);
+
+    }
+    .btn.delete:active{
+    border-bottom: 2px solid rgba(95, 1, 1, 0.356);
+    }
+    #colums{
+        column-width: 350px;
+        /* border:5px solid ; */
+        margin: 5px; 
+        column-gap: 15px;
+    }
+    #colums figure{
+        display: inline-block;
+        border:1px solid rgba(0,0,0,0.2);
+        margin: 0;
+        margin-bottom: 15px;
+        padding: 10px;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.5) ;
+    }
+    #colums figure img{
+        width: 100%;
+    }
+    #colums figure figcaption{
+        color: antiquewhite;
+        border-top: 1px solid rgba(0,0,0,0.2);
+        padding: 10px;
+    }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>HEADER</h1>
+        </header>
+        <section class="content">
+            <main>
+                <div id="colums">
+                    <figure>
+                      <img src="image/1.jpg">
+                      <figcaption>부산 이기대 트레킹</figcaption>
+                    </figure>
+                      
+                    <figure>
+                      <img src="image/2.jpg">
+                      <figcaption>부산 이기대 트레킹 완료 후 식사</figcaption>
+                    </figure>
+                      
+                    <figure>
+                      <img src="image/3.jpg">
+                      <figcaption>부산 시민공원 수요일 러닝</figcaption>
+                    </figure>
+                      
+                    <figure>
+                      <img src="image/4.jpg">
+                      <figcaption>부산 온천천 수요일 러닝</figcaption>
+                    </figure>
+                      
+                    <figure>
+                      <img src="image/5.jpg">
+                      <figcaption>부산 황령산 야등</figcaption>
+                    </figure>
+                      
+                    <figure>
+                       <img src="image/6.jpg">
+                      <figcaption>거제도 사량도 종주</figcaption>
+                    </figure>
+                      
+                    <figure>
+                      <img src="image/7.jpg">
+                      <figcaption>부산 온천천 - 광안리 라이딩</figcaption>
+                    </figure>	
+                      
+                    <figure>
+                      <img src="image/8.jpg">
+                      <figcaption>부산 사직 운동장 수요일 러닝</figcaption>
+                    </figure>
+                      
+                    <figure>
+                      <img src="image/9.jpg">
+                      <figcaption>창원 운영진 김지훈 회원의 눈빛</figcaption>
+                    </figure>	
+                    <figure>
+                      <img src="image/10.jpg">
+                      <figcaption>거제도 사량도 종주 2</figcaption>
+                    </figure>	
+                  </div>
+            </main>
+            <nav>
+                <ul class="tree">
+                    <li>     
+                      <input type ="checkbox" id="root">
+                      <label for = "root">ROOT</label>
+                      <ul>
+                        <li><a href = "https://smart-factory-lee-joon-ho.tistory.com/">node1</a></li>
+                        <li><a href = "https://smart-factory-lee-joon-ho.tistory.com/">node2</a></li>
+                        <li>
+                          <input type="checkbox" id ="node3">
+                          <label for="node3">node3</label>
+                          <ul>
+                            <li><a href = "https://smart-factory-lee-joon-ho.tistory.com/">node3_1</a></li>
+                            <li><a href = "https://smart-factory-lee-joon-ho.tistory.com/">node3_2</a></li>
+                            <li><a href = "https://smart-factory-lee-joon-ho.tistory.com/">node3_3</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>      
+            </nav>
+            <aside>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid ea quaerat earum odit quod nemo optio in neque mollitia dolorum libero sunt animi consequatur magni, amet, qui ab et autem.
+            </aside>
+        </section>
+        <footer>
+            <a href ="add" class = "btn add">ADD</a>
+            <a href="delete" class = "btn delete">DEL</a>        
+        </footer>
+    </div>
+    
+</body>
+</html>

@@ -4,88 +4,107 @@
   <meta charset="ko">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Typing Text</title>
+  <title>종주중독</title>
   <!-- 글로벌 구글 아이콘 -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
   <!-- 랍스터 구글 폰드  -->
   <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  
   <link href="style.css" rel="stylesheet">
   
- 
+  <link href="tree_fontello/css/fontello.css" rel="stylesheet">
+
 </head>
 <body>
-  <ul class="tree">
-    <li>     
-    <input type ="checkbox" id="root">
-    <label for = "root">ROOT</label>
-     <ul>
-        <li>node</li>
-        <li>python</li>
-        <li>java</li>
+  <div class="container"><header>
+    <h1>사진첩</h1>
+  </header>
+    <section class="content">
+      <main>
+        <div id="colums">
+          <figure>
+            <img src="image/1.jpg">
+            <figcaption>부산 이기대 트레킹</figcaption>
+          </figure>
+            
+          <figure>
+            <img src="image/2.jpg">
+            <figcaption>부산 이기대 트레킹 완료 후 식사</figcaption>
+          </figure>
+            
+          <figure>
+            <img src="image/3.jpg">
+            <figcaption>부산 시민공원 수요일 러닝</figcaption>
+          </figure>
+            
+          <figure>
+            <img src="image/4.jpg">
+            <figcaption>부산 온천천 수요일 러닝</figcaption>
+          </figure>
+            
+          <figure>
+            <img src="image/5.jpg">
+            <figcaption>부산 황령산 야등</figcaption>
+          </figure>
+            
+          <figure>
+            <img src="image/6.jpg">
+            <figcaption>거제도 사량도 종주</figcaption>
+          </figure>
+            
+          <figure>
+            <img src="image/7.jpg">
+            <figcaption>부산 온천천 - 광안리 라이딩</figcaption>
+          </figure>	
+            
+          <figure>
+            <img src="image/8.jpg">
+            <figcaption>부산 사직 운동장 수요일 러닝</figcaption>
+          </figure>
+            
+          <figure>
+            <img src="image/9.jpg">
+            <figcaption>창원 운영진 김지훈 회원의 눈빛</figcaption>
+          </figure>	
+          <figure>
+            <img src="image/10.jpg">
+            <figcaption>거제도 사량도 종주 2</figcaption>
+          </figure>	
+        </div>
+      </main>
+      <nav>
+        <ul class="tree">
+        <li>     
+          <input type ="checkbox" id="root">
+          <label for = "root">ROOT</label>
+          <ul>
+            <li><a href = "https://smart-factory-lee-joon-ho.tistory.com/">node1</a></li>
+            <li><a href = "https://smart-factory-lee-joon-ho.tistory.com/">node2</a></li>
+            <li>
+              <input type="checkbox" id ="node3">
+              <label for="node3">node3</label>
+              <ul>
+                <li><a href = "https://smart-factory-lee-joon-ho.tistory.com/">node3_1</a></li>
+                <li><a href = "https://smart-factory-lee-joon-ho.tistory.com/">node3_2</a></li>
+                <li><a href = "https://smart-factory-lee-joon-ho.tistory.com/">node3_3</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
       </ul>
-    </li>
-  </ul>
-  <!-- <img src ="image/KakaoTalk_20220514_152317011_02.jpg"> -->
-  <!-- figure : 삽화( 삽화에 대한 설명 ) -->
-  <div id="colums">
-    <figure>
-      <img src="image/1.jpg">
-      <figcaption>부산 이기대 트레킹</figcaption>
-    </figure>
-      
-    <figure>
-      <img src="image/2.jpg">
-      <figcaption>부산 이기대 트레킹 완료 후 식사</figcaption>
-    </figure>
-      
-    <figure>
-      <img src="image/3.jpg">
-      <figcaption>부산 시민공원 수요일 러닝</figcaption>
-    </figure>
-      
-    <figure>
-      <img src="image/4.jpg">
-      <figcaption>부산 온천천 수요일 러닝</figcaption>
-    </figure>
-      
-    <figure>
-      <img src="image/5.jpg">
-      <figcaption>부산 황령산 야등</figcaption>
-    </figure>
-      
-    <figure>
-       <img src="image/6.jpg">
-      <figcaption>거제도 사량도 종주</figcaption>
-    </figure>
-      
-    <figure>
-      <img src="image/7.jpg">
-      <figcaption>부산 온천천 - 광안리 라이딩</figcaption>
-    </figure>	
-      
-    <figure>
-      <img src="image/8.jpg">
-      <figcaption>부산 사직 운동장 수요일 러닝</figcaption>
-    </figure>
-      
-    <figure>
-      <img src="image/9.jpg">
-      <figcaption>창원 운영진 김지훈 회원의 눈빛</figcaption>
-    </figure>	
-    <figure>
-      <img src="image/10.jpg">
-      <figcaption>거제도 사량도 종주 2</figcaption>
-    </figure>	
-  </div>
-  
-<div> 
-  <a href ="add" class = "btn add">add</a>
-  <a href="delete" class = "btn delete">delete</a>
+    </nav>
+    <aside>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita ullam voluptas fugiat consequuntur, accusantium velit nemo deserunt numquam veritatis repellat? Ipsam autem consectetur fugit atque accusamus magni? Voluptatem, inventore asperiores.</aside>
+  </section>
+  <footer>
+    <a href ="add" class = "btn add">add</a>
+    <a href="delete" class = "btn delete">delete</a>
+  </footer>
 </div>
+
   <!-- <div class ="thumnail round"style="background-image:url('image/KakaoTalk_20220514_152317011_02.jpg')"></div> -->
   <div class="wrap">
     <h1>
-      <span class="material-icons">language</span>
+      <!-- <span class="material-icons">language</span> -->
     </h1>
      <P id="dynamic" class="lg-text">
     

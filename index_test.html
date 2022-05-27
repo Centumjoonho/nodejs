@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .tree input[type="checkbox"]{
+            display: none;
+        }
+        .tree input[type="checkbox"]:checked~ul{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <ul class="tree">
+        <li>     
+          <input type ="checkbox" id="root">
+          <label for = "root">ROOT</label>
+          <ul>
+            <li>node1</li>
+            <li>node2</li>
+            <li>
+              <input type="checkbox" id ="node3">
+              <label for="node3">node3</label>
+              <ul>
+                <li>node31</li>
+                <li>node32</li>
+                <li>node33</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    
+</body>
+</html>

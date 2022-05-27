@@ -4,7 +4,7 @@
     box-sizing : border-box;;
 }
 body{
-    background-color:   darkslateblue;
+    background-color:   rgba(19, 143, 143, 0.295);
 
 }
 .wrap{
@@ -101,11 +101,6 @@ body{
 .thumnail.circle{
   border-radius: 100%;
 }
-.root{
-    margin: 50px;
-    font-size: x-large;
-  
-}
 #colums{
     column-width: 350px;
     /* border:5px solid ; */
@@ -128,14 +123,109 @@ body{
     border-top: 1px solid rgba(0,0,0,0.2);
     padding: 10px;
 }
+.tree{
+  color: darkorange;
+}
+.tree, .tree ul{
+  list-style: none;
+  padding-left: 15px;
+}
+.tree *:before{
+  width: 17px;
+  height: 17px;
+  display: inline-block;
+}
+.tree label{
+  cursor: pointer;
+}
+.tree label::before{
+  content: '\f255';
+  font-family: fontello;
+}
+.tree a {
+  text-decoration: none;
+  color: darkslategray;
+}
+.tree a:before{
+  content: '\e800';
+  font-family: fontello;
+}
 .tree input[type="checkbox"] {
     display: none;
-    margin: 15px;
   }
 .tree input[type="checkbox"]:checked~ul{
     display: none;
-    margin: 15px;
+    
   }
+.tree input[type="checkbox"]:checked+label::before{
+  content: '\f256';
+  font-family: fontello;
+}
+*{
+  box-sizing: border-box;
+}
+.container{
+border: 5px solid black;
+}
+.container>*{
+border: 5px solid red;
+}
+.container>.content>*{
+border: 5px solid green;
+}
+.container .content{
+  padding-left: 200px;
+  padding-right: 150px;
+  overflow: hidden;
+}
+.container .content>*{
+  float: left;
+  padding-bottom: 2500px;
+  margin-bottom: -2500px;
+}
 
-  
- 
+.container .content main{
+  width: 100%;
+}
+.container .content nav{
+  width: 200px;
+  margin-left:-100% ;
+  left: -200px;
+  position: relative;
+}
+.container .content aside{
+  width: 150px;
+  margin-right: -150px;
+}
+.container footer{
+  clear: both;
+}
+@media (max-width:599px){
+ .container .content{
+  padding-left: 0;
+  padding-right: 0;
+  overflow: visible;
+}
+  .container .content>*{
+  float: none;
+  padding-bottom: 0;
+  margin-bottom: -0;
+}
+
+  .container .content main{
+  width: 100%;
+}
+  .container .content nav{
+  width: auto;
+  margin-left:0 ;
+  left: 0;
+  position: relative;
+}
+  .container .content aside{
+  width: auto;
+  margin-right: 0;
+}
+
+}
+
+
